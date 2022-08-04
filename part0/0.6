@@ -1,0 +1,15 @@
+note over browser:
+User type words on input and click submit
+end note over
+
+note over browser:
+browser executes the event handler 
+that prevent default action of form. 
+Then proceeds to recreate note list 
+in the HTML and send the new note 
+to the server with content-type of 
+'application/json'
+end note over
+
+browser->server: HTTP POST  https://studies.cs.helsinki.fi/exampleapp/new_note_spa {content: "msg content", date: "2022-08-04T01:41:16.560Z"}
+server-->browser: 201 RESPONSE note created
